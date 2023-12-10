@@ -94,26 +94,7 @@ if(session_id() != ''){
   include'sessionerror.php';
 }
 ?>
-<table>
-<tr>
-  <td width="70%">
-<?php
-$s = $_POST['pn'];
-$sql="SELECT * FROM patient_record_header WHERE name like '%$s%' ORDER BY pid DESC";
-$result = $conn->query($sql);
-?>
-<br/><br/><br/>
-<table class="table" align="center">
-<tr style="background:#a9c8e8;">
-  <th class="th" style='width:30px;'><b>Sno</b></th>
-  <th class="th" style='width:30px;'><b>pid</b></th>
-  <th class="th"><b>name</b></th>
-  <th class="th"><b>date</b></th>
-  <th class="th"><b>Reviewed By</b></th>
-  <th class="th"><b>action</b></th>
 
-</tr>
-</table>
 <div style="overflow-y:auto;height: 400px;">
 <table class="table" align="center">
 <table>
